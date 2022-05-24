@@ -2,14 +2,17 @@
 
 using namespace std;
 
-int main (){
-int num;
- cin >> num;
+int main()
+{
+	int num;
+	cin >> num;
 
- cout << "user wrate = " << num << "\n";
+	cout << "user wrate = " << num << "\n";
 
- if (num == 15) {
-	 cout << "OK";
- }else( cout << "NO");
-
+	if (num == 15)
+	{
+		cout << "OK";
+	}
+	else
+		(cout << "NO");
 }
