@@ -16,4 +16,4 @@ int main()
 	else
 		(cout << "NO");
 
-}1
+}
