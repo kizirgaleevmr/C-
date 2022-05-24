@@ -1,51 +1,15 @@
-/*
- * (c) Cranium, aka Череп. 2014
- * GNU GPL
- *
- * Game "Oldschool Snake
- *
- */
-
 #include <iostream>
-#include <conio.h>
-
-#include "CScreen.h"
-#include "CGame.h"
 
 using namespace std;
 
-int main()
-{
+int main (){
+int num;
+ cin >> num;
 
-	setlocale(LC_ALL, "Russian");
+ cout << "user wrate = " << num << "\n";
 
-	try
-	{
-		CScreen screen;
-		screen.cursor_show(false);
-		screen.text_attr((WORD)0x0a);
-		screen.cls();
-		CGame game(screen, 80, 24, 120);
+ if (num == 15) {
+	 cout << "OK";
+ }else( cout << "NO");
 
-		game.logo();
-
-		game.read_top10();
-		game.top10(false);
-		game.pak(18);
-
-		do
-		{
-			game.game_loop();
-			game.top10(true);
-
-		} while (game.once_more());
-
-		game.goodbye();
-	}
-	catch (CSScreenException &ex)
-	{
-		cerr << "*** " << ex.what() << endl;
-	}
-
-	return 0;
 }
